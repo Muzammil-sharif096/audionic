@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const SaleHeader = () => {
+const Personal = () => {
     const [showcompo, setshowcompo] = useState(false)
 
 
@@ -32,7 +32,7 @@ const SaleHeader = () => {
         <>
             <div className=' bg-black'>
                 <div className=" border-2 border-black   ">
-                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:px-12 p-4  gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:px-12 p-4   gap-5">
                         {saleItems.map((item) => (
                             <div className="rounded overflow-hidden shadow-lg bg-white ">
                                 <div className=' p-24 '>
@@ -147,21 +147,7 @@ const SaleHeader = () => {
                     <div className=' lg:w-96 w-full bg-gray-800  flex justify-center flex-col items-center gap-4  p-4'>
                         <img src="/img/audionic-the-sound-master-default-title-ad-7000-plus-2-1-multimedia-speaker-ac-dc-supported-33845783101596_255x255.png" alt="" />
                         <p className=' text-white'>AD 7000 Multimedia Speaker</p>
-                        <button className=' h-12 w-36 hover:bg-red-500 border-2 border-red-600 text-white'>Read more</button>
-                    </div>
-                    <div className="px-16">
-                        <marquee
-                            behavior=""
-                            direction="scroll"
-                            scrollamount=""
-                            className="text-white text-3xl font-bold"
-                        >
-                            <span className="text-red-500"> Pakistan's # 1 Audio Brand </span>
-                            Pakistan's # 1 Audio Brand Pakistan's # 1 Audio Brand Pakistan's #
-                            1 Audio Brand Pakistan's # 1 Audio Brand Pakistan's # 1 Audio
-                            Brand Pakistan's # 1 Audio Brand Pakistan's # 1 Audio Brand
-                            Pakistan's # 1 Audio Brand
-                        </marquee>
+                        <button className=' h-12 w-36 border-2 hover:bg-red-500 border-red-600 text-white'>Read more</button>
                     </div>
                 </div>
             </div>
@@ -169,4 +155,4 @@ const SaleHeader = () => {
     )
 }
 
-export default SaleHeader
+export default Personal

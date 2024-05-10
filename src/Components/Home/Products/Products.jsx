@@ -5,6 +5,20 @@ import { imgdata, products } from '../../../DATA'
 const Products = () => {
     return (
         <div className='xl:px-20 p-4 xl:py-12 bg-black space-y-16'>
+            <div className="px-16">
+                <marquee
+                    behavior=""
+                    direction="scroll"
+                    scrollamount=""
+                    className="text-white text-3xl font-bold"
+                >
+                    <span className="text-red-500"> Pakistan's # 1 Audio Brand </span>
+                    Pakistan's # 1 Audio Brand Pakistan's # 1 Audio Brand Pakistan's #
+                    1 Audio Brand Pakistan's # 1 Audio Brand Pakistan's # 1 Audio
+                    Brand Pakistan's # 1 Audio Brand Pakistan's # 1 Audio Brand
+                    Pakistan's # 1 Audio Brand
+                </marquee>
+            </div>
             <h1 className='text-6xl text-center font-bold text-white'>Best Sellers</h1>
             <div className='grid xl:grid-cols-3 lg:grid-cols-1 grid-cols-1  gap-6'>
                 {

@@ -5,6 +5,7 @@ const Corporate = () => {
     return (
         <div>
             <CorporateHeader />
+            
         </div>
     )
 }

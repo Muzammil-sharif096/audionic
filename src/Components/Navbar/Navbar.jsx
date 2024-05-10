@@ -4,17 +4,55 @@ import { IoMdContact } from "react-icons/io";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { products } from '../../DATA';
 
 const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(false);
     const [div, setDiv] = useState(false);
+    const [filteredData, setFilteredData] = useState([]);
+
+
+    const [text, setText] = useState('')
+
+    // const handleSearchItem = (e) => {
+    //     const value = e.target.value.toLowerCase();
+
+    //     if (value === '') {
+    //         setFilteredData([]);
+    //     }
+    //     else {
+    //         const filteredData = products.filter((item) =>
+    //             item.h1.toLowerCase().includes(value)
+    //         );
+    //         setFilteredData(filteredData);
+    //     }
+    // };
+
+
+    const handleSearchItem = (e) => {
+        const value = e.target.value.toLowerCase()
+        setText(value)
+
+        const filter = products.filter((item) => {
+            item.h1.toLocaleLowerCase().includes(value)
+            setFilteredData(filter)
+        })
+    }
+    console.log(text, "test text");
+    console.log(filteredData, "filter")
+
+
+    const handleclk = () => {
+        setShowNavbar(false)
+    }
+
     return (
-        <div className='bg-black px-12 p-4 py-4'>
+        <div className='bg-black xl:px-12 p-4 py-4'>
             <nav className='flex w-full justify-between items-center'>
                 <Link to='/'>
                     <img src="./img/logo (9).png" alt="" />
                 </Link>
-                <ul className='flex cursor-pointer text-white font-semibold gap-1.5 items-center'>
+                <ul className='xl:flex hidden cursor-pointer text-white font-semibold gap-1.5 items-center'>
                     <li className="group  flex items-center gap-1.5 tracking-[1px] hover:text-gray-300"><Link to='/sale'>Sales</Link>
                         <IoIosArrowDown className='ml-1' />
                     </li>
@@ -74,12 +112,28 @@ const Navbar = () => {
                         </div>
                     </li>
                 </ul>
-                <div className='flex gap-32 justify-between items-center'>
+                <div className='xl:flex hidden gap-32 justify-between items-center'>
                     <div className='relative'>
-                        <input className='p-1.5 w-full pl-7 rounded-full' type="text" name="" id="" placeholder='Search' />
+                        <input value={text} onChange={handleSearchItem} className='p-1.5 w-full pl-7 rounded-full' type="text" name="" id="" placeholder='Search' />
                         <FaSearch className='absolute text-sm top-3 left-2' />
+                        {
+                            filteredData && (
+                                <div className="absolute -left-52 right-0 w-96 top-14 bg-white shadow-lg rounded-md z-10 max-h-[600px] overflow-auto">
+                                    {
+                                        filteredData.map((ele, index) => (
+                                            <div key={index} className="p-6 space-y-2">
+                                                <img className='w-20' src={ele.img} alt="" />
+                                                <h1 className='text-sm font-bold tracking-wider'> Title : {ele.h1}</h1>
+                                                <p className='text-sm font-bold tracking-wider text-black'> Price : {ele.p}</p>
+                                                <hr className='border' />
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            )
+                        }
                     </div>
-                    <div className='flex items-center gap-3 text-white'>
+                    <div className='xl:flex hidden items-center gap-3 text-white'>
                         <IoMdContact onClick={() => setDiv(!div)} className='text-2xl' />
                         <FaShoppingCart className='text-xl' />
                     </div>
@@ -95,18 +149,20 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className='mt-4 p-2'>
-                            <img src="./img/logo (9).png" alt="" />
+                            <Link onClick={handleclk} to='/'>
+                                <img src="./img/logo (9).png" alt="" />
+                            </Link>
                             <hr className='border-[#63B597] p-2 mt-2' />
                             <ul className='text-white flex flex-col cursor-pointer items-start px-4 text-xl space-y-4 font-semibold text-center'>
-                                <li>Sales</li>
+                                <li><Link onClick={handleclk} to='/sale'>Sales</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li>Shop</li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li>More</li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li>Item 4</li>
+                                <li><Link onClick={handleclk} to='/about'>About Audionic</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li>Item 5</li>
+                                <li><Link onClick={handleclk} to='/corporate'>Corporate</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                             </ul>
                         </div>

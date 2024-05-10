@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer className=' bg-black text-white xl:px-12 xl:py-12  p-4'>
@@ -24,7 +24,7 @@ const Footer = () => {
                 <div>
                     <ul className='space-y-4'>
                         <li className='text-lg font-bold'>Shop</li>
-                        <li className='text-sm'>Personal Audio</li>
+                        <li className='text-sm'><Link to='/personal'>Personal Audio</Link></li>
                         <li className='text-sm'>Speakers</li>
                         <li className='text-sm'>Power Banks</li>
                         <li className='text-sm'>Channel Speakers</li>

@@ -63,7 +63,7 @@ const CorporateHeader = () => {
               the desired outcome.
             </p>
           </div>
-          <div className="lg:px-44 px-8 py-10 pb-20">
+          <div className="2xl:px-80 xl:px-60 lg:px-44 px-8 py-10 pb-20">
             <img src="/img/CORPORATE_GIFTING..2.png" alt="" />
           </div>
 

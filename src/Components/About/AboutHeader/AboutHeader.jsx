@@ -86,7 +86,7 @@ const AboutHeader = () => {
               alt=""
             />
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center before:">
             <img src="/img/Group_260_2.png" alt="" />
           </div>
         </div>

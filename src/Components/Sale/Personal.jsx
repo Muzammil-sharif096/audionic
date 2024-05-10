@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const SaleHeader = () => {
+const Personal = () => {
     const [showcompo, setshowcompo] = useState(false)
 
 
@@ -155,4 +155,4 @@ const SaleHeader = () => {
     )
 }
 
-export default SaleHeader
+export default Personal

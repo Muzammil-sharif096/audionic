@@ -6,7 +6,6 @@ const Sale = () => {
     return (
         <div>
             <SaleHeader />
-            <Personal/>
         </div>
     )
 }

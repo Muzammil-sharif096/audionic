@@ -6,8 +6,8 @@ import { MdOutlineLocalShipping } from "react-icons/md";
 import { FaIdeal } from "react-icons/fa6";
 import { BsJournalCheck } from "react-icons/bs";
 const schema = yup.object().shape({
-    // firstname: yup.string().firstname().required(),
-    // lastname: yup.string().lastname().required(),
+    firstname: yup.string().firstname().required(),
+    lastname: yup.string().lastname().required(),
     email: yup.string().email().required(),
     password: yup.string().min(8).max(32).required(),
 });

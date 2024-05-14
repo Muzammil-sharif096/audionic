@@ -30,16 +30,16 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-black xl:px-12 p-4 py-4'>
+        <div className='bg-black xl:px-12 relative p-4 py-4'>
             <nav className='flex w-full justify-between items-center'>
                 <Link to='/'>
                     <img src="./img/logo (9).png" alt="" />
                 </Link>
                 <ul className='xl:flex gap-2 hidden cursor-pointer text-white font-semibold items-center'>
                     <li className="group  flex items-center gap-1.5 tracking-[1px] hover:text-gray-300"><Link to='/sale'>Sales</Link></li>
-                    <li className="group relative  w-full flex items-center border-l-2 border-red-500 pl-2 tracking-[1px] hover:text-gray-300">Shop
+                    <li className="group   w-full flex items-center border-l-2 border-red-500 pl-2 tracking-[1px] hover:text-gray-300">Shop
                         <IoIosArrowDown className='ml-1' />
-                        <div className="absolute hidden bg-black transition-opacity duration-300 ease-in-out delay-100  top-full -left-[795px] w-[99.5vw] p-16 text-white z-10 group-hover:block mt-4">
+                        <div className="absolute hidden bg-black transition-opacity duration-300 ease-in-out delay-100 w-full  top-12  left-0  p-16 text-white z-10 group-hover:block mt-4">
                             <div className='grid grid-cols-4  gap-6'>
                                 <div >
                                     <img src="./img/101.avif" alt="" />

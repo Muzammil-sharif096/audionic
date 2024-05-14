@@ -10,6 +10,7 @@ import Blog from "./Components/Blog/BlogMain/Blog";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import Personal from "./Components/Sale/Personal";
+import SignUp from "./Components/Login/SignUp";
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/login" element={<Login />} />
         <Route path="/personal" element={<Personal />} />
+        <Route path="/Account" element={<SignUp />} />
+
       </Routes>
       <Footer />
     </>

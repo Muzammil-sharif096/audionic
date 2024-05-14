@@ -90,7 +90,7 @@ const Navbar = () => {
                                 <li><Link to='/corporate'>Corporate Sales & Gifts</Link></li>
                                 <li><Link to='/blog'>Our Blogs</Link></li>
                                 <li>FAQs</li>
-                                
+
                             </ul>
                         </div>
                     </li>
@@ -150,7 +150,7 @@ const Navbar = () => {
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li><Link onClick={handleclk} to='/corporate'>Corporate</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li><Link onClick={handleclk} to='/'>Shop</Link></li>
+                                <li><Link onClick={handleclk} to='/shop'>Shop</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                             </ul>
                         </div>

@@ -9,13 +9,13 @@ import { Routes } from 'react-router-dom';
 const schema = yup.object().shape({
     email: yup.string().email().required(),
     password: yup.string().min(8).max(32).required(),
-  });
+});
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm({
         resolver: yupResolver(schema)
     });
-    const onSubmitHandler = (data )=>{
-        console.log({data});
+    const onSubmitHandler = (data) => {
+        console.log({ data });
         reset();
     };
     return (

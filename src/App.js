@@ -9,7 +9,7 @@ import Blog from "./Components/Blog/BlogMain/Blog";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import Personal from "./Components/Sale/Personal";
-import Parti from "./Components/Particals";
+
 
 function App() {
   return (

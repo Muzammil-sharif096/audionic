@@ -72,7 +72,7 @@ const SaleHeader = () => {
                                     
                                 </div>
                                 <div className=' p-4 self-end'>
-                                    <button onClick={openpage} className='h-12 btn text-white  rounded-br-full    w-72 sm:w-96  md:w-80  lg:w-96'>ADD TO CART</button>
+                                    <button onClick={openpage} className='h-12 btn text-white  rounded-br-full w-full'>ADD TO CART</button>
                                     {
                                         showcompo && (
                                             <div className='flex justify-center items-center h-screen absolute left-1/2'>

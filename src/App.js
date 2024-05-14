@@ -9,6 +9,7 @@ import Blog from './Components/Blog/BlogMain/Blog'
 import Login from './Components/Login/Login';
 import SignUp from './Components/Login/SignUp';
 import Footer from "./Components/Footer/Footer"
+import Personal from './Components/Sale/Personal'
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<Login />} />
         <Route path='/Account' element={<SignUp />} />
+        <Route path='/personal' element={<Personal />} />
+
       </Routes>
       <Footer />
     </>

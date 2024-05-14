@@ -35,11 +35,11 @@ const SaleHeader = () => {
                 <div className=" border-2 border-black   ">
                     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:px-6 p-4  gap-4">
                         {saleItems.map((item, index) => (
-                            <div className=" overflow-hidden  bg-gray-100 rounded-xl  ">
-                                <div className=' flex justify-center items-center bg-gray-300  rounded-b-[80%]  p-4  '>
+                            <div className="overflow-hidden bg-gray-100 rounded-xl grid">
+                                <div className='flex justify-center items-center bg-gray-300  rounded-b-[80%]  p-4  '>
                                     <img className=" " src={item.image} alt='' />
                                 </div>
-                                <div className="px-6  flex flex-col justify-center gap-1 ">
+                                <div className="px-6 flex flex-col justify-center gap-1">
                                     <h2 className="font-medium text-base ">{item.name}</h2>
                                     <p className=' text-red-600 text-sm font-bold'>{item.para1} <span className=' font-normal text-gray-700 text-sm delete'> <del>Rs.9,499</del></span></p>
                                     <div className=' flex  items-center gap-1'>
@@ -62,7 +62,7 @@ const SaleHeader = () => {
                                     </div>
                                     
 
-                                        <div className="flex gap-1.5 pt-1">
+                                        <div className="flex gap-1.5 pt-1 ">
                                             {item.colors && item.colors.map((i) => {
                                                 return (
                                                     <div className={`h-4 w-4 rounded-full ${i.color}`}></div>
@@ -71,10 +71,8 @@ const SaleHeader = () => {
                                         </div>
                                     
                                 </div>
-                                <div className=' p-4 '>
+                                <div className=' p-4 self-end'>
                                     <button onClick={openpage} className='h-12 btn text-white  rounded-br-full    w-72 sm:w-96  md:w-80  lg:w-96'>ADD TO CART</button>
-
-
                                     {
                                         showcompo && (
                                             <div className='flex justify-center items-center h-screen absolute left-1/2'>

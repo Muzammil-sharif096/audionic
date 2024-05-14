@@ -146,13 +146,11 @@ const Navbar = () => {
                             <ul className='text-white flex flex-col cursor-pointer items-start px-4 text-xl space-y-4 font-semibold text-center'>
                                 <li><Link onClick={handleclk} to='/sale'>Sales</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li>Create An Account</li>
-                                <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li><Link onClick={handleclk} to='/about'>About Audionic</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li><Link onClick={handleclk} to='/corporate'>Corporate</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li><Link onClick={handleclk} to='/login'>Login</Link></li>
+                                <li><Link onClick={handleclk} to='/'>Shop</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                             </ul>
                         </div>

@@ -27,7 +27,7 @@ const Navbar = () => {
     //         setFilteredData(filteredData);
     //     }
     // };
-    
+
 
     const handleSearchItem = (e) => {
         const value = e.target.value.toLowerCase()
@@ -40,6 +40,11 @@ const Navbar = () => {
     }
     console.log(text, "test text");
     console.log(filteredData, "filter")
+
+
+    const handleclk = () => {
+        setShowNavbar(false)
+    }
 
     return (
         <div className='bg-black xl:px-12 p-4 py-4'>
@@ -144,18 +149,20 @@ const Navbar = () => {
                             </button>
                         </div>
                         <div className='mt-4 p-2'>
-                            <img src="./img/logo (9).png" alt="" />
+                            <Link onClick={handleclk} to='/'>
+                                <img src="./img/logo (9).png" alt="" />
+                            </Link>
                             <hr className='border-[#63B597] p-2 mt-2' />
                             <ul className='text-white flex flex-col cursor-pointer items-start px-4 text-xl space-y-4 font-semibold text-center'>
-                                <li>Sales</li>
+                                <li><Link onClick={handleclk} to='/sale'>Sales</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li>Shop</li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                                 <li>More</li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li>Item 4</li>
+                                <li><Link onClick={handleclk} to='/about'>About Audionic</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
-                                <li>Item 5</li>
+                                <li><Link onClick={handleclk} to='/corporate'>Corporate</Link></li>
                                 <hr className='border-[#63B597] p-2 mt-2 w-full' />
                             </ul>
                         </div>

@@ -17,6 +17,16 @@ code {
 @tailwind utilities;
 
 .homeheader {
-  background-image: url(../public/img/speaker.jpg);
+  background-image: url(../public/img/img22);
   background-size: 100% 100%;
 }
+
+.btn{
+  background-color: red;
+}
+
+
+
+
+
+

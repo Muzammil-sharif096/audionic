@@ -7,7 +7,7 @@ import About from './Components/About/AboutMain/About';
 import Corporate from './Components/Corporate/CorporateMain/Corporate';
 import Blog from './Components/Blog/BlogMain/Blog'
 import Login from './Components/Login/Login';
-
+import SignUp from './Components/Login/SignUp';
 function App() {
   return (
     <>
@@ -19,9 +19,9 @@ function App() {
         <Route path='/corporate' element={<Corporate />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/Account' element = {<SignUp/>}/>
       </Routes>
     </>
   );
 }
-
 export default App;

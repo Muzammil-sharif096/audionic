@@ -70,6 +70,7 @@ const Navbar = () => {
                                 <li><Link to='/corporate'>Corporate Sales & Gifts</Link></li>
                                 <li><Link to='/blog'>Our Blogs</Link></li>
                                 <li>FAQs</li>
+                                
                             </ul>
                         </div>
                     </li>
